@@ -53,7 +53,7 @@ if (selectedFood === "Pasta") {
     2 - Carbonara
     3 - Puttanesca`
   )
-  subtypeChoice = ["Cacio E Pepe", "Carbonara", "Puttanesca"]
+  subtypeChoice = ["cacio e pepe", "pasta carbonara", "pasta puttanesca"]
 } else if (selectedFood === "Pizza") {
   typeOfFood = prompt(
     `What type of pizza would you like? 
@@ -71,7 +71,7 @@ if (selectedFood === "Pasta") {
     2 - Greek Salad
     3 - Classic Shrimp Salad`
   )
-  subtypeChoice = ["Caesar Salad", "Greek Salad", "Classic Shrimp Salad"]
+  subtypeChoice = ["Caesar salad", "Greek salad", "classic shrimp salad"]
 }
 
 if (typeOfFood === "1") {
@@ -110,14 +110,16 @@ if (age <= 13) {
 }
 
 const orderSummary = (prompt(
-  `Ok, bene bene.. now, let's see.. You've ordered a ${finalChoice} for ${age}. Do you wish to place the order?
-  Please, enter 1 to place the order or 2 to cancel order`
+  `Ok, bene bene.. now, let's see.. You've ordered a ${finalChoice} for ${age}. 
+  Do you wish to place the order? 
+  1 - Yes
+  2 - No`  
 ))
 
 // Step 5 - Order confirmation
 
 if (orderSummary === "1") {
-  alert(`Bravissimo! The ${finalChoice} for ${age} will be ready for you to pick up in 15 minutes! Grazie for your order. Welcome!`)
+  alert(`Bravissimo! One ${finalChoice} for ${age} will be ready for you to pick up in 15 minutes! Grazie for your order. Welcome!`)
 } else if (orderSummary === "2") {
   alert(`Ok, we will cancel your order of ${finalChoice} for ${age}. Welcome back any time!`)
 } else {

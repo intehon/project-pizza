@@ -128,13 +128,13 @@ alert(
     `Ok, bene bene.. now, let's see.. You've ordered a ${finalChoice} for ${age}. 
     Do you wish to place the order? 
     1 - Yes
-    2 -No`
+    2 - No`
   ))
   
   // Step 5 - Order confirmation
   
   if (orderSummary === "1") {
-    alert(`Bravissimo! The ${finalChoice} for ${age} will be ready for you to pick up in 15 minutes! Grazie for your order. Welcome!`)
+    alert(`Bravissimo! One ${finalChoice} for ${age} will be ready for you to pick up in 15 minutes! Grazie for your order. Welcome!`)
   } else if (orderSummary === "2") {
     alert(`Ok, we will cancel your order of ${finalChoice}. Welcome back any time!`)
   } else {
