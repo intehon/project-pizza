@@ -2,7 +2,7 @@
 
 // Step 1 - Welcome and introduction
 alert(
-    `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
+    `Benvenuto! Welcome! To pizza della Signoria. Ready to Start? - Click 'OK' to begin.`
   )
   
   const userName = prompt(
@@ -26,34 +26,18 @@ alert(
   let selectedFood = ""
   
   if (foodChoice === "1") {
-    selectedFood = "Pasta"
+    selectedFood = "pasta"
   } else if (foodChoice === "2") {
-    selectedFood = "Pizza"
+    selectedFood = "pizza"
   } else if (foodChoice === "3") {
-    selectedFood = "Salad"
+    selectedFood = "salad"
   } else {
-    //If the user enters an invalid option, throw error and restart
+    //If the user enters an invalid option, throw error and exit
     alert(`You've made an invalid choice. Please try again!`)
     process.exit(1) 
   }
   
   alert(`You've chosen ${selectedFood}! Yummy! Now, let's be more specific...`)
-  
-//   switch(foodChoice) {
-//     case 1:
-//       alert(`You've chosen pasta! Excellent choice!`)
-//       break;
-//     case 2:
-//       alert(`You've chosen pizza! Yummy yummy!`)
-//       break;
-//     case 3:
-//       alert(`Mmm, salad! Great choice!`)
-//       break;
-//     default:
-//       alert(`You've made an invalid choice. Please try again!`)
-//       location.reload() 
-//       break;
-//   }
   
   // Step 3 - Subtype choice
   //Initialize variables to store values from users input
@@ -61,8 +45,9 @@ alert(
   let subtypeChoice = []
   let finalChoice = ""
 
+  //Switch statement to prompt the user to select from different types of sub choices
   switch(selectedFood) {
-    case "Pasta": 
+    case "pasta": 
         typeOfFood = prompt(
             `What type of pasta would you like? 
             Select the number of your choice: 
@@ -70,9 +55,9 @@ alert(
             2 - Carbonara
             3 - Puttanesca`
         )
-        subtypeChoice = ["Cacio E Pepe", "Carbonara", "Puttanesca"]
+        subtypeChoice = ["cacio e pepe", "pasta carbonara", "pasta puttanesca"]
         break;
-    case "Pizza":
+    case "pizza":
         typeOfFood = prompt(
             `What type of pizza would you like? 
             Select the number of your choice: 
@@ -82,7 +67,7 @@ alert(
           )
           subtypeChoice = ["Margherita", "Capricciosa", "Pizza Bianca"]
           break;
-    case "Salad": 
+    case "salad": 
         typeOfFood = prompt(
             `What type of salad would you like? 
             Select the number of your choice: 
@@ -90,70 +75,44 @@ alert(
             2 - Greek Salad
             3 - Classic Shrimp Salad`
         )
-        subtypeChoice = ["Caesar Salad", "Greek Salad", "Classic Shrimp Salad"]
+        subtypeChoice = ["Caesar salad", "Greek salad", "classic shrimp salad"]
         break;
     default:
         alert(`You've made an invalid choice. Please try again!`)
-        location.reload() 
+        process.exit(1) 
         break;
 
   }
 
-  console.log(subtypeChoice)
-  
-//   if (selectedFood === "Pasta") {
-//     typeOfFood = prompt(
-//       `What type of pasta would you like? 
-//       Select the number of your choice: 
-//       1 - Cacio E Pepe
-//       2 - Carbonara
-//       3 - Puttanesca`
-//     )
-//     subtypeChoice = ["Cacio E Pepe", "Carbonara", "Puttanesca"]
-//   } else if (selectedFood === "Pizza") {
-//     typeOfFood = prompt(
-//       `What type of pizza would you like? 
-//       Select the number of your choice: 
-//       1 - Margherita
-//       2 - Capricciosa
-//       3 - Pizza Bianca`
-//     )
-//     subtypeChoice = ["Margherita", "Capricciosa", "Pizza Bianca"]
-//   } else if (selectedFood === "Salad") {
-//     typeOfFood = prompt(
-//       `What type of salad would you like? 
-//       Select the number of your choice: 
-//       1 - Caesar Salad
-//       2 - Greek Salad
-//       3 - Classic Shrimp Salad`
-//     )
-//     subtypeChoice = ["Caesar Salad", "Greek Salad", "Classic Shrimp Salad"]
-//   }
-  
-  if (typeOfFood === "1") {
-    alert(
-      `Excellente! You've chosen ${subtypeChoice[0]}. We'll prepare it for you in just a second! But first we need to know...`
-    )
-    finalChoice = subtypeChoice[0]
-  } else if (typeOfFood === "2") {
-    alert(
-      `Excellente! You've chosen ${subtypeChoice[1]}. We'll prepare it for you in just a second! But first we need to know...`
-    )
-    finalChoice = subtypeChoice[1]
-  } else if (typeOfFood === "3") {
-    alert(
-      `Excellente! You've chosen ${subtypeChoice[2]}. We'll prepare it for you in just a second! But first we need to know...`
-    )
-    finalChoice = subtypeChoice[2]
-  } else {
-    alert(`You've made an invalid choice. Please try again!`)
-    process.exit(1)
-  }
-  
+  //Alert user what subtype of food they've chosen
+  switch(typeOfFood) {
+    case "1": 
+        alert(
+            `Excellente! You've chosen ${subtypeChoice[0]}. We'll prepare it for you in just a second! But first we need to know...`
+        )
+        finalChoice = subtypeChoice[0]
+        break;
+    case "2": 
+        alert(
+            `Excellente! You've chosen ${subtypeChoice[1]}. We'll prepare it for you in just a second! But first we need to know...`
+        )
+        finalChoice = subtypeChoice[1]
+        break;
+    case "3":
+        alert(
+            `Excellente! You've chosen ${subtypeChoice[2]}. We'll prepare it for you in just a second! But first we need to know...`
+        )
+        finalChoice = subtypeChoice[2]
+        break;
+    default:
+        alert(`You've made an invalid choice. Please try again!`)
+        process.exit(1)
+        break;
+    }
   
   // Step 4 - Age
   let age = parseInt(prompt(
-    `Is this for a child or an adult? Your age, per favore:`
+    `...is this food for a child or an adult? Your age, per favore:`
   ))
   
   if (age <= 13) {
@@ -166,8 +125,10 @@ alert(
   }
   
   const orderSummary = (prompt(
-    `Ok, bene bene.. now, let's see.. You've ordered a ${finalChoice} for ${age}. Do you wish to place the order?
-    Please, enter 1 to place the order or 2 to cancel order`
+    `Ok, bene bene.. now, let's see.. You've ordered a ${finalChoice} for ${age}. 
+    Do you wish to place the order? 
+    1 - Yes
+    2 -No`
   ))
   
   // Step 5 - Order confirmation
@@ -175,7 +136,7 @@ alert(
   if (orderSummary === "1") {
     alert(`Bravissimo! The ${finalChoice} for ${age} will be ready for you to pick up in 15 minutes! Grazie for your order. Welcome!`)
   } else if (orderSummary === "2") {
-    alert(`Ok, we will cancel your order of ${finalChoice} for ${age}. Welcome back any time!`)
+    alert(`Ok, we will cancel your order of ${finalChoice}. Welcome back any time!`)
   } else {
     alert(
       `Oh, something went wrong.. We were so close. Please, try again!`
