@@ -39,22 +39,6 @@ if (foodChoice === "1") {
 
 alert(`You've chosen ${selectedFood}! Yummy! Now, let's be more specific...`)
 
-// switch(foodChoice) {
-//   case 1:
-//     alert(`You've chosen pasta! Excellent choice!`)
-//     break;
-//   case 2:
-//     alert(`You've chosen pizza! Yummy yummy!`)
-//     break;
-//   case 3:
-//     alert(`Mmm, salad! Great choice!`)
-//     break;
-//   default:
-//     alert(`You've made an invalid choice. Please try again!`)
-//     location.reload() 
-//     break;
-// }
-
 // Step 3 - Subtype choice
 //Initialize variables to store values from users input
 let typeOfFood = ""
