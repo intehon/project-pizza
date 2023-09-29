@@ -1,11 +1,10 @@
-# Project Name
+# JavaScript Pizzeria
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+A project to try out some vital yet basic JavaScript, like variables, conditionals and native methods. Pure coding, no web page fuss.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started out working with if statements for conditionals, and trying out different ways to store the user's input. When I was finished, I created a new .js file, the switch.js where I replaced the if conditionals with switch statements.
+I'm still not sure which way is the right one, but it was educational and fun to play around!
 
 ## View it live
-
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
