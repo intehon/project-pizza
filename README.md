@@ -8,3 +8,5 @@ I started out working with if statements for conditionals, and trying out differ
 I'm still not sure which way is the right one, but it was educational and fun to play around!
 
 ## View it live
+
+https://pizza-della-emelie.netlify.app/
