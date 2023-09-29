@@ -2,7 +2,7 @@
 
 // Step 1 - Welcome and introduction
 alert(
-    `Benvenuto! Welcome! To pizza della Signoria. Ready to Start? - Click 'OK' to begin.`
+    `Benvenuto! Welcome to pizza della Emelie! Ready to Start? - Click 'OK' to begin.`
   )
   
   const userName = prompt(
@@ -114,6 +114,7 @@ alert(
   let age = parseInt(prompt(
     `...is this food for a child or an adult? Your age, per favore:`
   ))
+
   
   if (age <= 13) {
     age = `a child`

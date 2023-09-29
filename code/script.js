@@ -2,7 +2,7 @@
 
 // Step 1 - Welcome and introduction
 alert(
-  `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
+  `Benvenuto! Welcome to pizza della Emelie! Ready to Start? - Click 'OK' to begin.`
 )
 
 const userName = prompt(
